@@ -1,0 +1,16 @@
+
+.login-form__description-text--start {
+    margin-top: 1.5rem;
+    font-size: 3.5rem;
+    font-weight: 200;
+    margin-bottom: 0; 
+    font-weight: bolder;
+    color: #fff;
+}
+
+.login-form__description-text{
+    width: 80%;
+    text-align: center;
+    margin-top: 0;
+    color: #D8E1E7;
+}

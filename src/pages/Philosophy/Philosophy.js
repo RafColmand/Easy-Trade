@@ -1,10 +1,12 @@
 import React from "react"
 import './Philosophy.css';
 
+import ContainerInit from "../../components/ContainerComponent/ContainerInit/ContainerInit";
 
 function Philosophy() {
 
   return (
+   <ContainerInit>
     <div className='Content'>
 
       <div className="Phil_section1">
@@ -16,7 +18,7 @@ function Philosophy() {
             <div className="title"><h2>Plataforma de Trading en Línea</h2></div>
             <div className="text"><h2>La plataforma Easy Trade es una plataforma de trading en línea 
               que permite a los usuarios operar en una variedad de instrumentos financieros.</h2></div>
-            <a href="#" className="button1" target="_blank" rel="noreferrer">Registrate Ahora</a>
+            <a href="/Register" className="button1" target="_blank" rel="noreferrer">Registrate Ahora</a>
 
           </div>
 
@@ -141,6 +143,7 @@ function Philosophy() {
       </div>
 
     </div>
+   </ContainerInit>
   );
 }
 

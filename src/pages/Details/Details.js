@@ -8,6 +8,8 @@ import { FiPlus, FiMinus } from 'react-icons/fi';
 // Data
 import {HelpData} from "../../data/help.js"
 
+import ContainerInit from "../../components/ContainerComponent/ContainerInit/ContainerInit";
+
 
 function Details() {
 
@@ -28,6 +30,7 @@ function Details() {
    };
 
   return (
+   <ContainerInit>
     <div className='Content'>   
       <div className="IconContext_Provider" >
          <div className="AccordionSection">
@@ -57,6 +60,7 @@ function Details() {
          </div>
       </div>
     </div>
+   </ContainerInit>
   );
 }
 

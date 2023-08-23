@@ -1,0 +1,18 @@
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #D8E1E7;
+    margin: 1rem 0;
+}
+
+.l-gray{
+    margin-top: 0;
+}
+
+.footer-form{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding-bottom: 2rem;
+}

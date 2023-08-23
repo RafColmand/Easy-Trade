@@ -4,6 +4,8 @@ import "./Help.css"
 // Data
 import {HelpData} from "../../data/help.js"
 
+import ContainerInit from "../../components/ContainerComponent/ContainerInit/ContainerInit"
+
 function Help() {
   const [activeHelp] = useState(null)
 
@@ -12,6 +14,7 @@ function Help() {
   let tutorials = HelpData.filter((datas) => datas.type===2);
 
   return (
+   <ContainerInit>
     <div className='Content'>
 
       <div className="Help_section1">
@@ -77,10 +80,8 @@ function Help() {
                     ))} 
         </div>
       </div>
-
-
-      
     </div>
+   </ContainerInit>
   );
 }
 

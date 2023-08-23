@@ -12,7 +12,7 @@ const Navbar = () => {
                 <a href="/"> Inicio </a>  
                 <a href="/philosophy"> Sobre Nosotros </a>   
                 <a href="/help"> Centro de Ayuda </a> 
-                <a href="#" className="button-login" target="_blank" rel="noreferrer">Iniciar sesion</a>
+                <a href="/login" className="button-login" target="_blank" rel="noreferrer">Iniciar sesion</a>
             </div>
             
             <div className={`nav_toggle ${isOpen && "open"}`} onClick={ () =>

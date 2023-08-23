@@ -1,6 +1,8 @@
 import React, {useState} from "react"
 import './Initiation.css';
 
+import ContainerInit from "../../components/ContainerComponent/ContainerInit/ContainerInit";
+
 
 
 const ReadMore= ({children}) => {
@@ -26,13 +28,14 @@ function Initiation() {
 
     
   return (
+   <ContainerInit> 
     <div className='Content'>
       <div className="Section-1">
 
         <div className="text-section1">
           <div className="title"><h2>Rentabilidad en Aumento</h2></div>
           <div className="text"><h2>La plataforma de trading que apoya tus objetivos financieros.</h2></div>
-          <a href="#" className="button1" target="_blank" rel="noreferrer">Registrate Ahora</a>
+          <a href="/Register" className="button1" target="_blank" rel="noreferrer">Registrate Ahora</a>
         </div>
 
         <div>
@@ -166,6 +169,7 @@ function Initiation() {
         </div>
       </div>
     </div>
+  </ContainerInit>
   );
 }
 

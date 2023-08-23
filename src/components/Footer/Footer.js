@@ -1,6 +1,6 @@
 
 // Local
-import  SocialMedia                    from "../specific/SocialMedia/SocialMedia"
+import  SocialMedia                    from "../Specific/SocialMedia/SocialMedia"
 import IconsComponent               from '../IconsComponent/IconsComponent.js'
 // Data
 import socialMedia from "../../data/socialMedia.json"
