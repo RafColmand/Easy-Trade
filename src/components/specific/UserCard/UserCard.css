@@ -1,0 +1,47 @@
+.user-card-container{
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+    gap: 2rem;
+    color: #3DA6FB;
+}
+
+.user-card-container__notification{
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.user-card{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid #94949C;
+}
+
+.user-card-photo{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.user-card-photo img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user-card-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #3DA6FB;
+    color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.name-user{
+    color: #D6E1E7;
+}

@@ -1,0 +1,29 @@
+{
+    "logo": "Eden.png",
+    "elements": [
+        {
+            "name": "Inicio",
+            "type": "Link",
+            "icon": "home",
+            "href": "/home"
+        },
+        {
+            "name": "Usuarios",
+            "type": "Link",
+            "icon": "user",
+            "href": "/user"
+        },
+        {
+            "name": "Wallet",
+            "type": "Link",
+            "icon": "wallet",
+            "href": "/wallet"
+        },
+        {
+            "name": "Help",
+            "type": "Link",
+            "icon": "help",
+            "href": "/helpDashboard"
+        }
+    ]
+}

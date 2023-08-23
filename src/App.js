@@ -9,6 +9,10 @@ import Help from './pages/Help/Help';
 import Details from './pages/Details/Details';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
+import Home from './pages/Home/Home';
+import User from './pages/User/User';
+import Wallet from './pages/Wallet/Wallet';
+import HelpDashboard from './pages/HelpDashboard/HelpDashboard';
 
 function App() {
   return (
@@ -21,6 +25,10 @@ function App() {
           <Route path="/Details/:id" element={<Details/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/Register' element={<Register/>}/>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/user' element={<User/>}/>
+          <Route path='/wallet' element={<Wallet/>}/>
+          <Route path='/helpDashboard' element={<HelpDashboard/>}/>
         </Routes>
       </Router>
       
