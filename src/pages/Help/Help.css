@@ -1,0 +1,105 @@
+/*Seccion 1*/
+.Help_section1{
+    flex-direction: row;
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.Help_text{
+    width: 60%;
+}
+
+.image-help{
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
+
+/*Seccion 2*/
+.Help_section2{
+    margin: 0 auto;
+    width: 90%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+}
+
+.guides{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.guide {
+    flex-direction: column;
+    display: flex;
+    background-color: rgba(214, 225, 231, 0.10);
+    border-radius: 10px;
+    width: 24%;
+    margin: 5px;
+    transition: transform 1s;
+}
+
+.guide a{
+    text-decoration: none;
+    flex-direction: column;
+    display: flex;
+}
+
+.guide:hover{
+    transform: scale(1.05);
+}
+
+.image-guide{
+    width: 20%;
+    float: left;
+    padding: 1rem;
+}
+
+/*Seccion 3*/
+.Help_section3{
+    margin: 0 auto;
+    width: 90%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5rem;
+}
+
+.tutorials{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.tutorial {
+    flex-direction: column;
+    display: flex;
+    background-color: rgba(214, 225, 231, 0.10);
+    border-radius: 10px;
+    width: 24%;
+    margin: 5px;
+    transition: transform 1s;
+}
+
+.tutorial a{
+    text-decoration: none;
+    flex-direction: column;
+    display: flex;
+}
+.tutorial:hover{
+    transform: scale(1.05);
+}
+
+
+.image-tutorial{
+    width: 20%;
+    float: left;
+    padding: 1rem;
+}

@@ -1,0 +1,137 @@
+/*Estilos sección 1 del inicio*/
+
+.Section-1{
+    flex-direction: row;
+    display: flex;
+    padding-top: 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.text-section1{
+    width: 40%;
+    padding-top: 2rem;
+
+}
+
+.title {
+    text-align: left;
+}
+
+.text{
+    text-align: left;
+}
+
+.image-section1{
+    height: 90%;
+    width: 120%;
+    padding-top: 2rem;
+}
+
+.button1{
+    float: left;
+}
+
+/*Estilos sección 2 del inicio*/
+
+.Section-2{
+    flex-direction: row;
+    display: flex;
+    padding-top: 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.text-section2{
+    padding-left: 18%;
+    width: 57%;    
+}
+
+.image-section2{
+    height: 90%;
+    width: 130%;
+    padding-top: 2rem;
+}
+
+.read_more{
+    background-color: rgba(214, 225, 231, 0.10);
+    border-radius: 10px;
+}
+
+.subtitle {
+    padding: 1rem;
+    padding-bottom: 0rem;
+}
+
+.text_readMore{
+    margin: 1rem;
+    padding-bottom: 1rem;
+}
+
+.read-pr-hide{
+    color: #3DA6FB;
+}
+
+
+/*Estilos sección 2 del inicio*/
+
+.Section-3{
+    flex-direction:column;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+.Container1-2{
+    flex-direction:row;
+    display: flex;
+    padding-top: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+
+.Section3_1{
+    background-color: rgba(214, 225, 231, 0.10);
+    border-radius: 10px;
+    width: 38%;
+}
+
+.Section3_2{
+    background-color: rgba(214, 225, 231, 0.10);
+    border-radius: 10px;
+    width: 58%;
+}
+
+.Container3_2{
+    flex-direction: row;
+    display: flex;
+}
+
+.text_section3_2{
+    width: 80%;
+}
+
+.Section3_3{
+    background-color: rgba(214, 225, 231, 0.10);
+    border-radius: 10px;
+    flex-direction:row;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+.Container3_3{
+    padding-right: 1.5rem;
+    width: 80%;
+}
+
+.items{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

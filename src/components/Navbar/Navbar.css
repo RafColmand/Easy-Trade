@@ -1,0 +1,107 @@
+.navbar{
+    background: #566C7F;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.logo--dropdown{
+    max-height: 3rem;
+    margin-left: 30px;
+    padding-top: 0;
+  }
+
+.nav_items{
+    margin-right: 30px;
+    background-color: #566C7F;
+}
+
+.nav_items a{
+    margin: 15px;
+    color: white;
+    position: relative;
+    text-decoration: none;
+    padding: .75rem;
+    border-radius: 8px;
+}
+
+.nav_items a:hover{
+    background-color: #3DA6FB;
+}
+
+.button-login{
+    padding: .75rem;
+    border: 2px solid #3DA6FB;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+.nav_toggle{
+    display: none;
+}
+
+@media (max-width:768px)  {
+
+    .nav_items{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: inherit;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: -webkit-fill-available; 
+        transform: translateX(-100%);  
+        transition: 0.3s ease all;
+    }
+
+    .nav_items a{
+        padding: .75rem;
+        color: #FFF;
+        text-decoration: none;
+        border-radius: 8px;
+        background-color: #566C7F;
+    }
+
+    .nav_items a:hover{
+        background-color: #48CBC5;
+
+    }
+
+    .nav_items.open{
+        transform: translateX(0);
+    }
+
+    .nav_toggle {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .nav_toggle span {
+        width: 30px;
+        height: 4px;
+        background: white;
+        border-radius: 2px;
+        margin-bottom: 5px;
+        transform-origin: 5px 0px;
+        transition: all 0.2s linear;
+    }
+
+    .nav_toggle.open > span{
+        transform: rotate(45deg) translate(0px, 0px);
+    }
+
+    .nav_toggle.nav_toggle.open > span:nth-child(2){
+        display: none;
+    }
+    
+    .nav_toggle.nav_toggle.open > span:nth-child(3){
+        transform: rotate(-45deg) translate(-5px, 1px);
+    }
+
+}
