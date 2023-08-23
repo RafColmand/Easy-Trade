@@ -30,8 +30,8 @@ function Help() {
 
           </div>
 
-          <div>
-            <img className="image-help" src={require('../../assets/help.png')} alt="image1"/>
+          <div className="image-help">
+            <img className="img-help" src={require('../../assets/help.png')} alt="image1"/>
           </div>
 
       </div>
@@ -48,8 +48,8 @@ function Help() {
                             : ""}`}
                         > 
                           <a href={"/Details/" + data.id}>
-                            <div>
-                              <img className="image-guide" src={data.url} alt="image1"/>
+                            <div className="image-guide">
+                              <img className="img-gui" src={data.url} alt="image1"/>
                             </div>
                             
                            <div className="subtitle"><h2>{data.title}</h2></div>
@@ -70,8 +70,8 @@ function Help() {
                             : ""}`}
                         > 
                           <a href={"/Details/" + data.id}>
-                            <div>
-                              <img className="image-tutorial" src={data.url} alt="image1"/>
+                            <div className="image-tutorial">
+                              <img className="img-tut" src={data.url} alt="image1"/>
                             </div>
                             
                             <div className="subtitle"><h2>{data.title}</h2></div>

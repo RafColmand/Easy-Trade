@@ -8,10 +8,17 @@
     top: 0;
 }
 
-.logo--dropdown{
-    max-height: 3rem;
+.nav_logo{
+    width: 10%;
+    padding-top: 2rem;
     margin-left: 30px;
-    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo--dropdown{
+    width: 100%;
   }
 
 .nav_items{

@@ -22,8 +22,8 @@ function Philosophy() {
 
           </div>
 
-          <div>
-            <img className="image-phil1" src={require('../../assets/philosophy_1.png')} alt="image1"/>
+          <div className="image-phil1">
+            <img className="img-p1" src={require('../../assets/philosophy_1.png')} alt="image1"/>
           </div>
 
         </div>
@@ -78,8 +78,8 @@ function Philosophy() {
 
           <div className="Values">
 
-            <div>
-              <img className="image-val" src={require('../../assets/Iconos/val1.png')} alt="image1"/>
+            <div className="image-val">
+              <img className="img-val" src={require('../../assets/Iconos/val1.png')} alt="image1"/>
             </div>
 
            <div className="val_text">
@@ -94,8 +94,8 @@ function Philosophy() {
           </div>
 
           <div className="Values">
-            <div>
-              <img className="image-val" src={require('../../assets/Iconos/val2.png')} alt="image1"/>
+            <div className="image-val">
+              <img className="img-val" src={require('../../assets/Iconos/val2.png')} alt="image1"/>
             </div>
 
             <div className="val_text">
@@ -109,8 +109,8 @@ function Philosophy() {
           </div>
 
           <div className="Values">
-            <div>
-              <img className="image-val" src={require('../../assets/Iconos/val3.png')} alt="image1"/>
+            <div className="image-val">
+              <img className="img-val" src={require('../../assets/Iconos/val3.png')} alt="image1"/>
             </div>
 
             <div className="val_text">
@@ -124,8 +124,8 @@ function Philosophy() {
           </div>
           
           <div className="Values">
-            <div>
-              <img className="image-val" src={require('../../assets/Iconos/val4.png')} alt="image1"/>
+            <div className="image-val">
+              <img className="img-val" src={require('../../assets/Iconos/val4.png')} alt="image1"/>
             </div>
 
             <div className="val_text">

@@ -38,16 +38,16 @@ function Initiation() {
           <a href="/Register" className="button1" target="_blank" rel="noreferrer">Registrate Ahora</a>
         </div>
 
-        <div>
-          <img className="image-section1" src={require('../../assets/S1.png')} alt="image1"/>
+        <div className="image-section1">
+          <img className="img-s1" src={require('../../assets/S1.png')} alt="image1"/>
         </div>
 
       </div>
 
       <div className="Section-2">
         
-        <div>
-          <img className="image-section2" src={require('../../assets/S2.png')} alt="image1"/>
+        <div className="image-section2">
+          <img className="img-s2" src={require('../../assets/S2.png')} alt="image1"/>
         </div>
         
         <div className="text-section2">
@@ -129,8 +129,8 @@ function Initiation() {
 
               </div>
               
-              <div>
-                <img className="image-section3_2" src={require('../../assets/S3.1.png')} alt="image1"/>
+              <div className="image-section3_2">
+                <img className="img-s3_2" src={require('../../assets/S3.1.png')} alt="image1"/>
               </div>
 
             </div>
@@ -141,8 +141,8 @@ function Initiation() {
 
         <div className="Section3_3">
           
-          <div>
-            <img className="image-section3_3" src={require('../../assets/S3.2.png')} alt="image1"/>
+          <div className="image-section3_3">
+            <img className="img-s3_3" src={require('../../assets/S3.2.png')} alt="image1"/>
           </div>
 
           <div className="Container3_3">
