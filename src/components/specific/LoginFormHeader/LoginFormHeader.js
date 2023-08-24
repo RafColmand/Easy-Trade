@@ -1,5 +1,4 @@
 import React from 'react'
-import logo_light_IMG from "../../../assets/images/logo_light_IMG.png"
 import "./LoginFormHeader.css"
 
 const LoginFormHeader = () => {

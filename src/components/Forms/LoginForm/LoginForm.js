@@ -2,8 +2,8 @@ import React from "react"
 import { useFormik } from "formik";
 import { useNavigate }    from "react-router-dom"
 
-import LoginFormFooter from "../../Specific/LoginFormFooter/LoginFormFooter"
-import LoginFormHeader from "../../Specific/LoginFormHeader/LoginFormHeader"
+import LoginFormFooter from "../../specific/LoginFormFooter/LoginFormFooter"
+import LoginFormHeader from "../../specific/LoginFormHeader/LoginFormHeader"
 // Style
 import "./LoginForm.css"
 
@@ -11,6 +11,12 @@ import "./LoginForm.css"
 
 const LoginForm = () => {
     const history = useNavigate();
+
+    
+    let navigate = useNavigate()
+    const handleClick = () => {
+        navigate('/Home')
+    }
 
     const formik = useFormik({
         initialValues: { user: "", password: "" },
@@ -69,7 +75,7 @@ const LoginForm = () => {
                             {formik.errors.password && formik.touched.password && formik.errors.password}
                         </p>
                     </div>
-                        <button type="submit" className="button__login" disabled={formik.isSubmitting}>
+                        <button onClick={handleClick} type="submit" className="button__login" disabled={formik.isSubmitting}>
                             Ingresar
                         </button>
                 </div>

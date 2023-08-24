@@ -3,9 +3,10 @@
 .Section-1{
     flex-direction: row;
     display: flex;
-    padding-top: 2rem;
+    padding-top: 4rem;
     width: 90%;
     margin: 0 auto;
+    padding-bottom: 3rem;
 }
 
 .text-section1{
@@ -95,7 +96,7 @@
     width: 90%;
     margin: 0 auto;
     padding-bottom: 5rem;
-    padding-top: 3rem;
+    padding-top: 4rem;
 }
 
 .Container1-2{

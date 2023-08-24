@@ -2,26 +2,30 @@
 
 .Phil_section1{
     width: 100%;
-    padding-bottom: 3rem;
+    padding-bottom: 8rem;
+    padding-top: 6rem;
     background: linear-gradient(0deg, rgba(31, 75, 137, 1) 0%, rgba(61, 166, 251, 0.5) 0%);
 }
 
 .Container_phil1{
     flex-direction: row;
     display: flex;
-    padding-top: 5rem;
     width: 90%;
     margin: 0 auto;
     justify-content: space-between;
 }
 
 .Phil_text{
-    width:50% ;
+    width:60% ;
     padding-right: 1rem;
 }
 
+.Phil_text .text{
+    width: 90%;
+}
+
 .image-phil1{
-    width: 50%;
+    width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,17 +49,27 @@
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
-    padding-left: 3rem;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
     padding-top: 5rem;
 }
 
 .phil_text2{
-    padding-left: 8rem;
+    width: 70%;
+}
+
+.phil_text2 .text{
+    width: 90%;
 }
 
 .image-phil2{
-    height: 400px;
+    width: 20%;
 }
+
+.img-ph2{
+    width: 100%;
+}
+
 .Container_phil2_2{
     flex-direction: row;
     display: flex;
@@ -81,7 +95,7 @@
     display: flex;
     margin: 0 auto; 
     justify-content: space-between;
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
 }
 
 .phil_text4{

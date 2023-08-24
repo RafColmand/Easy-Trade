@@ -33,8 +33,8 @@ function Philosophy() {
       <div className="Phil_section2">
 
         <div className="Container_phil2_1"> 
-          <div>
-            <img className="image-phil2" src={require('../../assets/philosophy_2.png')} alt="image1"/>
+          <div className="image-phil2" >
+            <img className="img-ph2" src={require('../../assets/philosophy_2.png')} alt="image1"/>
           </div>
 
           <div className="phil_text2">

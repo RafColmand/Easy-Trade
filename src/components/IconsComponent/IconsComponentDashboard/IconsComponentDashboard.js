@@ -1,7 +1,5 @@
 import React from 'react'
-import { BsFillCalendarWeekFill } from 'react-icons/bs'
-import { FaBowlingBall, FaUserAlt, FaHome, FaWallet } from 'react-icons/fa'
-import {BiHelpCircle} from 'react-icons/bi'
+import { FaUserAlt, FaHome, FaWallet } from 'react-icons/fa'
 import { TbHelpSquareFilled } from 'react-icons/tb'
 
 const IconsComponentDashboard = ({ icon, className = '' }) => {

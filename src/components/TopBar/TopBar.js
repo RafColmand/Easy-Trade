@@ -1,6 +1,6 @@
 import React from 'react'
 import "./TopBar.css"
-import UserCard from "../Specific/UserCard/UserCard"
+import UserCard from "../specific/UserCard/UserCard"
 
 const TopBar = ({ section }) => {
   return (

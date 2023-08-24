@@ -2,8 +2,8 @@ import React from "react"
 import { useFormik } from "formik";
 import { useNavigate }    from "react-router-dom"
 
-import RegisterFormFooter from "../../Specific/RegisterFormFooter/RegisterFormFooter";
-import RegisterFormHeader from "../../Specific//RegisterFormHeader/RegisterFormHeader";
+import RegisterFormFooter from "../../specific/RegisterFormFooter/RegisterFormFooter";
+import RegisterFormHeader from "../../specific/RegisterFormHeader/RegisterFormHeader";
 // Style
 import "./RegisterForm.css"
 

@@ -1,8 +1,6 @@
 import React,  {useState} from "react"
 import { useParams } from "react-router-dom";
 import "./Details.css"
-
-import { IconContext } from 'react-icons';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 
 // Data
@@ -39,7 +37,7 @@ function Details() {
                <div className="Container_wrap">
                   <div className="title"><h2>{inf.title}</h2></div>
                   <div className="text"><h2>Aqui va la descripcion de la guia o del tutorial
-                     Nota: Agregar en el archivo help.js</h2></div>
+                     </h2></div>
                {inf.inf_help.map((info, index)=>
                <>
                   <div className="Wrap" onClick={() => toggle(index)} key={index}>

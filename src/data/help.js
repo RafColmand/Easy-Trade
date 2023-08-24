@@ -157,12 +157,12 @@ export const HelpData= [
             {
                 id_inf:"0",
                 inf_title: "segundo titulo, segundo titulo, segundo titulo,segundo titulo,segundo titulo,segundo titulo,segundo titulo,",
-                description:"aqui va la descripcion que Rafa me va a sacar"
+                description:"aqui va la descripcion"
             },
             {
                 id_inf:"1",
                 inf_title: "segundo titulo",
-                description:"aqui va la descripcion que Rafa me va a sacar"
+                description:"aqui va la descripcion"
             }
         ]
     },
