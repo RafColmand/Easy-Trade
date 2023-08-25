@@ -1,17 +1,11 @@
-import React,  {useState} from "react"
+import React from "react"
 import "./Help.css"
 
-// Data
-import {HelpData} from "../../data/help.js"
-
 import ContainerInit from "../../components/ContainerComponent/ContainerInit/ContainerInit"
+import ListGuides from "../../components/List/ListGuides/ListGuides"
+import ListTutorials from "../../components/List/ListTutorials/ListTutorials"
 
 function Help() {
-  const [activeHelp] = useState(null)
-
-  let guides = HelpData.filter((datas) => datas.type===1);
-
-  let tutorials = HelpData.filter((datas) => datas.type===2);
 
   return (
    <ContainerInit>
@@ -37,49 +31,14 @@ function Help() {
       </div>
 
       <div className="Help_section2">
-
-        <div className="title"><h2>Guía de Usuario</h2></div>
-
-        <div className="guides">
-          {guides.map((data) => (
-            
-                        <div  key={`${data.id}-help`} className={`guide${data.id === activeHelp
-                            ? "active-activity"
-                            : ""}`}
-                        > 
-                          <a href={"/Details/" + data.id}>
-                            <div className="image-guide">
-                              <img className="img-gui" src={data.url} alt="image1"/>
-                            </div>
-                            
-                           <div className="subtitle"><h2>{data.title}</h2></div>
-                          </a> 
-                        </div>
-                   ))} 
-        </div>
+        <ListGuides url={"/Details/"}/>
       </div>
       
       <div className="Help_section3">
-
-        <div className="title"><h2>Tutoriales de Trading</h2></div>
-
-        <div className="tutorials">
-          {tutorials.map((data) => (
-                        <div key={`${data.id}-help`} className={`tutorial${data.id === activeHelp
-                            ? "active-activity"
-                            : ""}`}
-                        > 
-                          <a href={"/Details/" + data.id}>
-                            <div className="image-tutorial">
-                              <img className="img-tut" src={data.url} alt="image1"/>
-                            </div>
-                            
-                            <div className="subtitle"><h2>{data.title}</h2></div>
-                          </a>  
-                        </div>
-                    ))} 
-        </div>
+        <ListTutorials url={"/Details/"}/>
       </div>
+
+
     </div>
    </ContainerInit>
   );

@@ -1,12 +1,12 @@
 import React,  {useState} from "react"
 import { useParams } from "react-router-dom";
+import { FaAngleDown, FaAngleUp} from 'react-icons/fa'
+
 import "./Details.css"
-import { FiPlus, FiMinus } from 'react-icons/fi';
 
 // Data
 import {HelpData} from "../../data/help.js"
 
-import ContainerInit from "../../components/ContainerComponent/ContainerInit/ContainerInit";
 
 
 function Details() {
@@ -28,7 +28,6 @@ function Details() {
    };
 
   return (
-   <ContainerInit>
     <div className='Content'>   
       <div className="IconContext_Provider" >
          <div className="AccordionSection">
@@ -42,7 +41,7 @@ function Details() {
                <>
                   <div className="Wrap" onClick={() => toggle(index)} key={index}>
                      <h1>{info.inf_title}</h1>
-                     <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                     <span>{clicked === index ? <FaAngleUp/> : <FaAngleDown />}</span>
                   </div>
                   {clicked === index ? (
                      <div className="Dropdown">
@@ -58,7 +57,6 @@ function Details() {
          </div>
       </div>
     </div>
-   </ContainerInit>
   );
 }
 

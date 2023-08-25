@@ -1,0 +1,37 @@
+
+.guides{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.guide {
+    flex-direction: column;
+    display: flex;
+    background-color: rgba(214, 225, 231, 0.10);
+    border-radius: 10px;
+    width: 24%;
+    margin: 5px;
+    transition: transform 1s;
+    padding-bottom: 2rem;
+}
+
+.guide a{
+    text-decoration: none;
+    flex-direction: column;
+    display: flex;
+}
+
+.guide:hover{
+    transform: scale(1.05);
+}
+
+.image-guide{
+    width: 30%;
+    float: left;
+    padding: 1rem;
+}
+
+.img-gui{
+    width: 100%;
+}

@@ -40,43 +40,6 @@
     padding-bottom: 3rem;
 }
 
-.guides{
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.guide {
-    flex-direction: column;
-    display: flex;
-    background-color: rgba(214, 225, 231, 0.10);
-    border-radius: 10px;
-    width: 24%;
-    margin: 5px;
-    transition: transform 1s;
-    padding-bottom: 2rem;
-}
-
-.guide a{
-    text-decoration: none;
-    flex-direction: column;
-    display: flex;
-}
-
-.guide:hover{
-    transform: scale(1.05);
-}
-
-.image-guide{
-    width: 30%;
-    float: left;
-    padding: 1rem;
-}
-
-.img-gui{
-    width: 100%;
-}
-
 /*Seccion 3*/
 .Help_section3{
     margin: 0 auto;
@@ -85,42 +48,4 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 5rem;
-}
-
-.tutorials{
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
-}
-
-.tutorial {
-    flex-direction: column;
-    display: flex;
-    background-color: rgba(214, 225, 231, 0.10);
-    border-radius: 10px;
-    width: 24%;
-    margin: 5px;
-    transition: transform 1s;
-    padding-bottom: 2rem;
-}
-
-.tutorial a{
-    text-decoration: none;
-    flex-direction: column;
-    display: flex;
-}
-.tutorial:hover{
-    transform: scale(1.05);
-}
-
-
-.image-tutorial{
-    width: 30%;
-    float: left;
-    padding: 1rem;
-}
-
-.img-tut{
-    width: 100%;
 }
