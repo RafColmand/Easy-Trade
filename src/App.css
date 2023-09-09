@@ -90,3 +90,18 @@
   background-color: #3DA6FB;
 }
 
+@media (max-width:768px)  {
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #FFF;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .text{
+    color: #D6E1E7;
+    font-size: x-small;
+  }
+
+}

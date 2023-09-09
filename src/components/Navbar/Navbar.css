@@ -1,5 +1,5 @@
 .navbar{
-    background: #566C7F;
+    background-color: #566C7F;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -53,17 +53,31 @@
 
 @media (max-width:768px)  {
 
+    .navbar{
+        height: 60px;
+        top: 0;
+    }
+
+    .nav_logo{
+        width: 30%;
+        padding-top: 2rem;
+        margin-left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .nav_items{
         position: absolute;
         top: 60px;
         left: 0;
-        background-color: inherit;
         display: flex;
         flex-direction: column;
         width: 100%;
         height: -webkit-fill-available; 
         transform: translateX(-100%);  
         transition: 0.3s ease all;
+        background-color: #566c7f;
     }
 
     .nav_items a{
@@ -71,7 +85,6 @@
         color: #FFF;
         text-decoration: none;
         border-radius: 8px;
-        background-color: #566C7F;
     }
 
     .nav_items a:hover{
