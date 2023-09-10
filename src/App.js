@@ -1,6 +1,6 @@
 import './App.css';
 
-import React from "react"
+import React, {useState} from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
 import Initiation from './pages/Initiation/Initiation'
@@ -14,11 +14,14 @@ import User from './pages/User/User';
 import Wallet from './pages/Wallet/Wallet';
 import HelpDashboard from './pages/HelpDashboard/HelpDashboard';
 import DetailsDashboard from './pages/DetailDashboard/DetailDashboard';
+import StockContext from "./Context/StockContext";
 
 function App() {
+  const [stockSymbol, setStockSymbol] = useState("AAPL");
   return (
     <div className='App'>
       <Router>
+      <StockContext.Provider value={{ stockSymbol, setStockSymbol }}>
         <Routes>
           <Route path='/' element={<Initiation/>}/>
           <Route path='/philosophy' element={<Philosophy/>} />
@@ -32,6 +35,7 @@ function App() {
           <Route path='/wallet' element={<Wallet/>}/>
           <Route path='/helpDashboard' element={<HelpDashboard/>}/>
         </Routes>
+        </StockContext.Provider>
       </Router>
       
 

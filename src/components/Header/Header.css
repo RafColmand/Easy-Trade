@@ -1,0 +1,13 @@
+.textHeader{
+    font-size: 3rem;
+    line-height: 1; 
+}
+
+@media (min-width: 1280px) { 
+
+    .HeaderContent{
+        padding-left: 8rem;
+        padding-right: 8rem; 
+    }
+  
+}

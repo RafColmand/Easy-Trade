@@ -1,0 +1,74 @@
+.Symbol{
+    position: absolute; 
+    top: 1rem; 
+    left: 1rem; 
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #D6E1E7;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.OverviewPrice{
+    padding-top: 1rem;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    width: 100%; 
+    height: 100%;  
+}
+
+.Price{
+    display: flex; 
+    align-items: center; 
+    font-size: 0.5rem;
+    line-height: 1rem;
+    color: #FFF;
+}
+
+.Currency{
+    margin: 0.5rem; 
+    font-size: 1.125rem;
+    line-height: 1.75rem; 
+    color: #D6E1E7;
+}
+
+.Percent{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.textGreen{
+    color: green;
+}
+
+.textRed{
+    color: #EF4444; 
+}
+
+@media (min-width: 1280px) { 
+    
+    .Symbol{
+        font-size: 1.25rem;
+        line-height: 1.75rem; 
+    }
+
+    .Price{
+        font-size: 2.25rem;
+        line-height: 2.5rem; 
+    }
+     
+    .Currency{
+        font-size: 1.25rem;
+        line-height: 1.75rem; 
+    }
+
+    .Percent{
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
+@media (min-width: 1536px) { 
+
+}
+  
+  

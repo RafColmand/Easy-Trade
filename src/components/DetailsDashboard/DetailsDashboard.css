@@ -1,0 +1,27 @@
+.DetailsContent{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    width: 100%; 
+    height: 100%; border-color: #1F2937; 
+}
+
+.itemDetails{
+    display: flex; 
+    flex: 1 1 0%; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.item{
+    font-weight: bolder;
+    color: #FFF;
+    font-family: 'Work Sans', sans-serif;
+    text-align: left;
+}
+
+.item2{
+    font-family: 'Work Sans', sans-serif;
+    color: #D6E1E7;
+    text-align: right;
+}
