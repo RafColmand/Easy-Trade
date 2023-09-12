@@ -38,6 +38,21 @@
     padding: 1rem .5rem;
 }
 
+.login__input-error{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    border: 1px solid #7e7d7d;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0;
+    border-radius: 5px;
+    padding: 1rem .5rem;
+}
+
+.login__input-error:focus{
+    border: 1px solid red;
+}
+
 .login__input:focus{
     border: 1px solid #3DA6FB;
 }
@@ -50,6 +65,19 @@
     color: #d8e1e7;
     transition: 0.5s;
     padding-top: 3.5rem;
+}
+
+.login-inputs .login__input-error:valid ~ .login__label ,
+.login-inputs .login__input-error:focus ~ .login__label{
+    transform: translateX(10px) translateY(-.85rem);
+    font-size: .75rem;
+    padding: .45rem;
+    padding-top: .15rem;
+    padding-bottom: .15rem;
+    background-color: red;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 5px;
 }
 
 .login-inputs .login__input:valid ~ .login__label ,
@@ -82,7 +110,6 @@
 }
 
 .error {
-    color: rgba(207, 13, 13, 0.8);
-    font-weight: bold;
-    font-size: 1rem;
+    color: rgba(207, 74, 13, 0.8);
+    font-size: 1rem; 
 }

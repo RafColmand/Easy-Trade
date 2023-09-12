@@ -1,0 +1,37 @@
+.info-user{
+    flex-direction: column;
+    display: flex;
+}
+.photo{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.user-icon{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: #3DA6FB;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-weight: 4rem;
+}
+
+.name-user-profile{
+    color:#fff;
+    font-weight: 450;
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.id-user{
+    color:#fff;
+    font-weight: 150;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+}

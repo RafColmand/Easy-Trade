@@ -1,18 +1,14 @@
-.register-container-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    background-color: #272F37;
-    width: 100%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+.title-editProfile{
+    color:#fff;
+    font-weight: 400;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
 }
 
-.register-form{
-    width: 85%;
-    display: flex;
+.profile-form{
+    width: 100%;
     flex-direction: column;
+    display: flex;
     gap: 1rem;
 }
 
@@ -21,12 +17,19 @@
     margin-bottom: 2.5rem;
 }
 
-.register-inputs {
-    width: 95%;
+.editProfile-inputs {
+    width: 48.5%;
 
 }
 
-.register__input {
+.editProfile{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+}
+
+.profile__input {
     width: 100%;
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
@@ -37,11 +40,11 @@
     padding: 1rem .5rem;
 }
 
-.register__input:focus{
+.profile__input:focus{
     border: 1px solid #3DA6FB;
 }
 
-.register__input-error{
+.profile__input-error{
     width: 100%;
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
@@ -52,11 +55,11 @@
     padding: 1rem .5rem;
 }
 
-.register__input-error:focus{
+.profile__input-error:focus{
     border: 1px solid red;
 }
 
- .register__label {
+.profile__label {
     position: absolute;
     left: 0;
     pointer-events: none;
@@ -66,8 +69,21 @@
     padding-top: 3.5rem;
 }
 
-.register-inputs .register__input-error:valid ~ .register__label ,
-.register-inputs .register__input-error:focus ~ .register__label{
+.editProfile-inputs .profile__input:valid ~ .profile__label ,
+.editProfile-inputs .profile__input:focus ~ .profile__label{
+    transform: translateX(10px) translateY(-.85rem);
+    font-size: .75rem;
+    padding: .45rem;
+    padding-top: .15rem;
+    padding-bottom: .15rem;
+    background-color: #3DA6FB;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.editProfile-inputs .profile__input-error:valid ~ .profile__label ,
+.editProfile-inputs .profile__input-error:focus ~ .profile__label{
     transform: translateX(10px) translateY(-.85rem);
     font-size: .75rem;
     padding: .45rem;
@@ -79,36 +95,33 @@
     border-radius: 5px;
 }
 
-.register-inputs .register__input:valid ~ .register__label ,
-.register-inputs .register__input:focus ~ .register__label{
-    transform: translateX(10px) translateY(-.85rem);
-    font-size: .75rem;
-    padding: .45rem;
-    padding-top: .15rem;
-    padding-bottom: .15rem;
-    background-color: #3DA6FB;
-    font-weight: bold;
-    color: #FFFFFF;
-    border-radius: 5px;
-}
-
-.button__register {
-    background-color: #3DA6FB;
-    cursor: pointer;
-    border-width: 0;
-    width: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
-    border-radius: 10px;
-    gap: 15px;
-    font-weight: bold;
-    font-size: 1.25rem;
-    color: #FFFFFF;
-}
-
 .error {
-    color: rgba(207, 74, 13, 0.8);
-    font-size: 1rem; 
+    color: rgba(207, 13, 13, 0.8);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.profile__check{
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    font-size: 1rem;
+    color: #d8e1e7;
+    transition: 0.5s;
+}
+
+.radio{
+    color: #d8e1e7;
+    margin-left: 0.5rem;
+}
+
+.radios{
+    padding-left: 3rem;
+}
+
+.buttons_editProfile{
+    width: 50%;
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
 }

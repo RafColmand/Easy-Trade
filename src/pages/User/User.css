@@ -1,0 +1,24 @@
+.children{
+    flex-direction: row;
+    display: flex;
+    width: 95%;
+    margin-left: 3.5%;
+    padding-right: 1.5%;
+    justify-content: space-between; 
+}
+
+.img-profile{
+    width: 30%;
+}
+
+.edit-profile{
+    width: 67%;
+}
+
+.buttons{
+    padding-top: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+}

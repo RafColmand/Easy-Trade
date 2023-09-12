@@ -4,40 +4,40 @@ import { useNavigate }    from "react-router-dom"
 
 import LoginFormFooter from "../../specific/LoginFormFooter/LoginFormFooter"
 import LoginFormHeader from "../../specific/LoginFormHeader/LoginFormHeader"
+import {users} from "../../../data/mock"
 // Style
 import "./LoginForm.css"
 
 // const validate = 
 
 const LoginForm = () => {
-    const history = useNavigate();
 
-    
     let navigate = useNavigate()
-    const handleClick = () => {
-        navigate('/Home')
-    }
+    /* user filtra usuario por correo*/ 
+    let user = users.filter((data)=> data.email==="marihecmiranda160498@gmail.com");
+    
+    console.log(user);
 
     const formik = useFormik({
         initialValues: { user: "", password: "" },
         validate: values => {
             const errors = {};
-            if (!values.user) {
-                errors.user = "Requerido"
-            } else if (
-                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.user)
-            ) {
-                errors.user = "Email invalido"
-            }
             if (!values.password) {
-                errors.password = "Requerido"
-            }
-
+                errors.password = 'Requerido';
+              } /*comparo contraseña*/else if(values.password!=="123abc"){
+                errors.password = 'Contraseña incorrecta';
+              }
+            
+            if (!values.email) {
+                errors.email = 'Requerido';
+              } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                errors.email = 'Dirección de correo invalida';
+              }
             return errors;
         },
         onSubmit: values => {
             alert("Bienvenido");
-            history.push("/")
+            navigate('/home');
         },
     });
 
@@ -48,18 +48,23 @@ const LoginForm = () => {
                 <div className="login-inputs">
                     <div className="input-box">
                         <input
-                            id="user"
-                            name="user"
+                            id="email"
+                            name="email"
                             required
-                            type="text"
+                            type="email"
                             onChange={formik.handleChange}
-                            value={formik.values.user}
-                            className="login__input" />
-                        <label htmlFor="user" className="login__label">Usuario</label>
-
+                            onBlur={formik.handleBlur}
+                            value={formik.values.email}
+                            className={formik.errors.email && formik.touched.email
+                            ?"login__input-error"
+                            :"login__input"}/>
+                        <label htmlFor="email" className="login__label">Email</label>
+                        {formik.errors.email && formik.touched.email &&
                         <p className="error">
-                            {formik.errors.user && formik.touched.user && formik.errors.user}
+                            {formik.errors.email}
                         </p>
+                        }
+                        
                     </div>
                     <div className="input-box">
                         <input
@@ -67,15 +72,18 @@ const LoginForm = () => {
                             name="password"
                             type="password"
                             onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                             value={formik.values.password}
                             required
-                            className="login__input" />
+                            className={formik.errors.password && formik.touched.password
+                                ?"login__input-error"
+                                :"login__input"}/>
                         <label htmlFor="password" className="login__label">Contraseña</label>
                         <p className="error">
                             {formik.errors.password && formik.touched.password && formik.errors.password}
                         </p>
                     </div>
-                        <button onClick={handleClick} type="submit" className="button__login" disabled={formik.isSubmitting}>
+                        <button type="submit" className="button__login" disabled={formik.isSubmitting}>
                             Ingresar
                         </button>
                 </div>

@@ -10,32 +10,41 @@ import "./RegisterForm.css"
 // const validate = 
 
 const RegisterForm = () => {
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     const formik = useFormik({
-        initialValues: { username:"", user: "", password: "" },
+        initialValues: { username:"", email: "", password: "", confirmPassword: "" },
         validate: values => {
             const errors = {};
-            if (!values.user) {
-                errors.user = "Requerido"
-            } else if (
-                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.user)
-            ) {
-                errors.user = "Email invalido"
-            }
-            if (!values.password) {
-                errors.password = "Requerido"
-            }
-            
             if (!values.username) {
                 errors.username = "Requerido"
+            } else if (values.username.length < 3) {
+                errors.username = 'Nombre de usuario invalido';
+            }
+
+            if (!values.email) {
+                errors.email = 'Requerido';
+            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                errors.email = 'Dirección de correo invalida';
+            }
+
+            if (!values.password) {
+                errors.password = "Requerido"
+            } else if (values.password.length < 8){
+                errors.password = "La contraseña debe tener al menos 8 caracteres"
+            }
+            
+            if (!values.confirmPassword) {
+                errors.confirmPassword = "Requerido"
+            } else if (values.confirmPassword!==values.password){
+                errors.confirmPassword = "Las contraseñas no coinciden"
             }
 
             return errors;
         },
         onSubmit: values => {
             alert("Bienvenido");
-            history.push("/")
+            navigate('/user');
         },
     });
 
@@ -46,32 +55,41 @@ const RegisterForm = () => {
                 <div className="register-inputs">
                     <div className="input-box">
                         <input
-                            id="username"
+                            id="username" 
                             name="username"
-                            type="username"
-                            onChange={formik.handleChange}
-                            value={formik.values.username}
-                            required
-                            className="register__input" />
-                        <label htmlFor="password" className="register__label">Nombre de Usuario</label>
-                        <p className="error">
-                            {formik.errors.username && formik.touched.username && formik.errors.username}
-                        </p>
-                    </div>
-                    <div className="input-box">
-                        <input
-                            id="user"
-                            name="user"
-                            required
                             type="text"
                             onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.username}
+                            required
+                            className={formik.errors.username && formik.touched.username
+                                ?"register__input-error"
+                                :"register__input"}/>
+                        <label htmlFor="password" className="register__label">Nombre de Usuario</label>
+                        {formik.errors.username && formik.touched.username &&
+                            <p className="error">
+                                {formik.errors.username}
+                            </p>
+                        }
+                    </div>
+                    <div className="input-box">
+                        <input
+                            id="email"
+                            name="email"
+                            required
+                            type="email"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                             value={formik.values.user}
-                            className="register__input" />
-                        <label htmlFor="user" className="register__label">Email</label>
-
-                        <p className="error">
-                            {formik.errors.user && formik.touched.user && formik.errors.user}
-                        </p>
+                            className={formik.errors.email && formik.touched.email
+                                ?"register__input-error"
+                                :"register__input"}/>
+                        <label htmlFor="email" className="register__label">Email</label>
+                        {formik.errors.email && formik.touched.email &&
+                            <p className="error">
+                                {formik.errors.email}
+                            </p>
+                        }
                     </div>
                     <div className="input-box">
                         <input
@@ -79,27 +97,37 @@ const RegisterForm = () => {
                             name="password"
                             type="password"
                             onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                             value={formik.values.password}
                             required
-                            className="register__input" />
+                            className={formik.errors.password && formik.touched.password
+                                ?"register__input-error"
+                                :"register__input"}/>
                         <label htmlFor="password" className="register__label">Contraseña</label>
-                        <p className="error">
-                            {formik.errors.password && formik.touched.password && formik.errors.password}
-                        </p>
+                        {formik.errors.password && formik.touched.password &&
+                            <p className="error">
+                                {formik.errors.password}
+                            </p>
+                        }
                     </div>
                     <div className="input-box">
                         <input
-                            id="password"
-                            name="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
                             type="password"
                             onChange={formik.handleChange}
-                            value={formik.values.password}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.confirmPassword}
                             required
-                            className="register__input" />
-                        <label htmlFor="password" className="register__label">Contraseña</label>
-                        <p className="error">
-                            {formik.errors.password && formik.touched.password && formik.errors.password}
-                        </p>
+                            className={formik.errors.confirmPassword && formik.touched.confirmPassword
+                                ?"register__input-error"
+                                :"register__input"}/>
+                        <label htmlFor="confirmPassword" className="register__label">Confirmar Contraseña</label>
+                        {formik.errors.confirmPassword && formik.touched.confirmPassword &&
+                            <p className="error">
+                                {formik.errors.confirmPassword}
+                            </p>
+                        }
                     </div>
                         <button type="submit" className="button__register" disabled={formik.isSubmitting}>
                             Registrar
