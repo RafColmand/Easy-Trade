@@ -15,6 +15,10 @@ import Wallet from './pages/Wallet/Wallet';
 import HelpDashboard from './pages/HelpDashboard/HelpDashboard';
 import DetailsDashboard from './pages/DetailDashboard/DetailDashboard';
 import StockContext from "./Context/StockContext";
+import Orders from "./pages/Orders/Orders"
+import Payments from "./pages/Payments/Payments"
+import UpdatePassword from "./pages/UpdatePassword/UpdatePassword"
+import RegisterCard from './pages/RegisterCard/RegisterCard';
 
 function App() {
   const [stockSymbol, setStockSymbol] = useState("AAPL");
@@ -34,6 +38,10 @@ function App() {
           <Route path='/user' element={<User/>}/>
           <Route path='/wallet' element={<Wallet/>}/>
           <Route path='/helpDashboard' element={<HelpDashboard/>}/>
+          <Route path='/orders' element={<Orders/>}/>
+          <Route path='/payments' element={<Payments/>}/>
+          <Route path='/updatePassword' element={<UpdatePassword/>}/>
+          <Route path='/registerCard' element={<RegisterCard/>}/>
         </Routes>
         </StockContext.Provider>
       </Router>

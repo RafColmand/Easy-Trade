@@ -1,0 +1,61 @@
+.options{
+    padding-top: 2rem;
+    width: 28%;
+    margin-left: 5%;
+}
+
+.Nav {
+    display: grid;
+    grid-area: nav;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    justify-items: center;
+  }
+
+.Nav a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.5s;
+    text-decoration: none;
+    display: table;
+    padding: 1rem;
+}
+
+.Nav a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: rgb(0, 195, 255);
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: transform .25s;
+}
+
+.Nav a:hover::after{
+    transform: scale(1,1);
+}
+
+.active {
+    border-color: #1f252e; 
+    background-color: rgba(214, 225, 231, 0.10); 
+}
+  
+.Nav a:hover {
+    transform: scale(1.1);
+}
+
+.Transactions{
+    width: 90%;
+    margin: auto;
+}
+
+.Deposit{
+    width: 90%;
+    margin: auto;
+}
+
+.Remove{
+    width: 90%;
+    margin: auto;
+}

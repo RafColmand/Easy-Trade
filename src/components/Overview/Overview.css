@@ -1,11 +1,10 @@
 .Symbol{
-    position: absolute; 
     top: 1rem; 
     left: 1rem; 
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 2rem;
+    line-height: 3rem;
     color: #D6E1E7;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif; 
 }
 
 .OverviewPrice{
@@ -20,21 +19,21 @@
 .Price{
     display: flex; 
     align-items: center; 
-    font-size: 0.5rem;
-    line-height: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     color: #FFF;
 }
 
 .Currency{
-    margin: 0.5rem; 
-    font-size: 1.125rem;
+    margin: 1rem; 
+    font-size: 1.5rem;
     line-height: 1.75rem; 
     color: #D6E1E7;
 }
 
 .Percent{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 .textGreen{
@@ -48,27 +47,24 @@
 @media (min-width: 1280px) { 
     
     .Symbol{
-        font-size: 1.25rem;
-        line-height: 1.75rem; 
+        font-size: 2.5rem;
+        line-height: 1.5rem; 
     }
 
     .Price{
-        font-size: 2.25rem;
-        line-height: 2.5rem; 
+        font-size: 1.5rem;
+        line-height: 1.5rem; 
     }
      
     .Currency{
-        font-size: 1.25rem;
-        line-height: 1.75rem; 
+        font-size: 1rem;
+        line-height: 0.5rem; 
     }
 
     .Percent{
-        font-size: 1.25rem;
-        line-height: 1.75rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
     }
-}
-@media (min-width: 1536px) { 
-
 }
   
   

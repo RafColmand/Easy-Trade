@@ -39,7 +39,7 @@ const UserCard = () => {
                                 <BiUser className='icon-link'/>
                                 <p>Editar Perfil</p>
                             </a>
-                            <a href='/user' className="sub-menu-link" onClick={()=>setOpen(false)}>
+                            <a href='/updatePassword' className="sub-menu-link" onClick={()=>setOpen(false)}>
                                 <AiOutlineSetting className='icon-link'/>
                                 <p>Cambiar contraseña</p>
                             </a>

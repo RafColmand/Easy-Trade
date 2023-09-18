@@ -1,6 +1,8 @@
 import React from 'react'
-import { FaUserAlt, FaHome, FaWallet } from 'react-icons/fa'
+import { FaHome, FaWallet } from 'react-icons/fa'
 import { TbHelpSquareFilled } from 'react-icons/tb'
+import { MdPayments } from "react-icons/md"
+import { GoArrowSwitch } from "react-icons/go"
 
 const IconsComponentDashboard = ({ icon, className = '' }) => {
     const selectIcon = () => {
@@ -9,9 +11,12 @@ const IconsComponentDashboard = ({ icon, className = '' }) => {
             case 'home':
                 element = <FaHome className={className} />
                 break;
-            case 'user':
-                element = <FaUserAlt className={className} />
+            case 'payments':
+                element = <MdPayments className={className} />
                 break;
+            case 'operations':
+                element = <GoArrowSwitch className={className} color="white"/>
+            break;
             case 'wallet':
                 element = <FaWallet className={className} />
                 break;

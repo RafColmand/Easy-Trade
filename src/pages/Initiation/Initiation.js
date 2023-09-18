@@ -1,4 +1,6 @@
 import React, {useState} from "react"
+
+import { useNavigate }    from "react-router-dom"
 import './Initiation.css';
 
 import ContainerInit from "../../components/ContainerComponent/ContainerInit/ContainerInit";
@@ -26,6 +28,11 @@ const ReadMore= ({children}) => {
 
 function Initiation() {
 
+  const navigate = useNavigate();
+
+  const onClick= ()=>{
+    navigate('/Register');
+  }
     
   return (
    <ContainerInit> 
@@ -35,7 +42,7 @@ function Initiation() {
         <div className="text-section1">
           <div className="title"><h2>Rentabilidad en Aumento</h2></div>
           <div className="text"><h2>La plataforma de trading que apoya tus objetivos financieros.</h2></div>
-          <a href="/Register" className="button1" target="_blank" rel="noreferrer">Registrate Ahora</a>
+          <a onClick={onClick} className="button1" target="_blank" rel="noreferrer">Registrate Ahora</a>
         </div>
 
         <div className="image-section1">

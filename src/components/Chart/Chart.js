@@ -70,6 +70,7 @@ const Chart = () => {
         updateChartData();
     }, [stockSymbol, filter]);
 
+    console.log(data)
     
     return(
         <Card type={1}>

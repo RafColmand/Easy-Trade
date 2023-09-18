@@ -1,0 +1,52 @@
+.wallet-section{
+    width: 95%;
+    margin:auto;
+    flex-direction: row;
+    display: flex;
+    padding-top: 3rem;
+    padding-left: 1rem;
+}
+
+.wallet-s1{
+    width: 30%;
+}
+
+.wallet-profile{
+    margin-bottom: 2rem;
+}
+
+.card-wallet{
+
+}
+
+.wallet-s2{
+    width: 68%;
+    margin-left: 2%;
+    flex-direction: column;
+    display: flex;
+
+}
+
+.detail_active{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+}
+
+.wallet-chart{
+    width: 69%;
+    height: 25rem;
+    margin-right: 3%;
+
+}
+
+.detail_act{
+    width: 28%;
+    height: 10rem;
+}
+
+.wallet-assets{
+    background-color: blueviolet;
+    width: 100%;
+    margin-top: 2rem;
+}

@@ -1,0 +1,31 @@
+.DetailsTransaction{
+    width:90%;
+    margin:auto;
+}
+.DetailsTrans{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.Details-item{
+    display: flex; 
+    flex: 1 1 0%; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.itemD{
+    color: #FFF;
+    font-family: 'Work Sans', sans-serif;
+    text-align: left;
+    padding:1rem;
+}
+
+.itemDT{
+    font-family: 'Work Sans', sans-serif;
+    color: #D6E1E7;
+    text-align: right;
+    padding:1rem;
+}

@@ -8,19 +8,25 @@
             "href": "/home"
         },
         {
-            "name": "Usuarios",
+            "name": "Pagos",
             "type": "Link",
-            "icon": "user",
-            "href": "/user"
+            "icon": "payments",
+            "href": "/payments"
         },
         {
-            "name": "Wallet",
+            "name": "Operaciones",
+            "type": "Link",
+            "icon": "operations",
+            "href": "/orders"
+        },
+        {
+            "name": "Billetera",
             "type": "Link",
             "icon": "wallet",
             "href": "/wallet"
         },
         {
-            "name": "Help",
+            "name": "Ayuda",
             "type": "Link",
             "icon": "help",
             "href": "/helpDashboard"

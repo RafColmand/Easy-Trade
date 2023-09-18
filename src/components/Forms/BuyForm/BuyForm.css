@@ -1,0 +1,100 @@
+.buy-inputs {
+    width: 90%;
+    margin: auto;
+}
+
+.input-box{
+    position: relative;
+    margin-bottom: 3rem;
+    flex-direction: column;
+    display: flex;
+}
+
+.input-box-sub{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+}
+
+.buy__input{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    border: 1px solid #7e7d7d;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0;
+    border-radius: 5px;
+    padding: 1rem .5rem;
+}
+
+.buy__input:focus{
+    border: 1px solid #3DA6FB;
+}
+
+.buy__input-error{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    border: 1px solid #7e7d7d;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0;
+    border-radius: 5px;
+    padding: 1rem .5rem;
+}
+
+.buy__input-error:focus{
+    border: 1px solid red;
+}
+
+.buy__label {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    font-size: 1rem;
+    color: #d8e1e7;
+    transition: 0.5s;
+    padding-top: 3.5rem;
+}
+
+.buy-inputs .buy__input:valid ~ .buy__label ,
+.buy-inputs .buy__input:focus ~ .buy__label{
+    transform: translateX(10px) translateY(-.85rem);
+    font-size: .75rem;
+    padding: .45rem;
+    padding-top: .15rem;
+    padding-bottom: .15rem;
+    background-color: #3DA6FB;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.buy-inputs .buy__input-error:valid ~ .buy__label ,
+.buy-inputs .buy__input-error:focus ~ .buy__label{
+    transform: translateX(10px) translateY(-.85rem);
+    font-size: .75rem;
+    padding: .45rem;
+    padding-top: .15rem;
+    padding-bottom: .15rem;
+    background-color: red;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.radios_buy{
+    flex-direction: row;
+    display: flex;
+    padding-bottom:1rem;
+}
+
+.buy__check{
+    font-size: 1rem;
+    color: #d8e1e7
+}

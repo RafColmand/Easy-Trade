@@ -42,6 +42,7 @@ const Home = () => {
   }, [stockSymbol]);
 
   return (
+    <div className='HomeContent'>
     <ContainerDashboard section={"Dashboard"}>
       <div className='DashboardContent'>
         <div className='header_dash'>
@@ -63,7 +64,7 @@ const Home = () => {
           <DetailsDashboard details={stockDetails}/>
         </div>
       </div>
-    </ContainerDashboard>
+    </ContainerDashboard></div>
   )
 }
 

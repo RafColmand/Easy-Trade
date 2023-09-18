@@ -1,0 +1,54 @@
+.content-form-dep{
+    margin: 1rem;
+    padding-top: 1rem;
+}
+
+.content-form{
+    margin: 1rem;
+    padding-top: 3rem;
+}
+
+.content-form-comp{
+    margin: 1rem;
+    padding-top: 1.5rem;
+}
+
+.btn-deposit{
+    margin: 1rem;
+    padding-left: 1.5rem;
+}
+
+.Voucher-img{
+    width: 30%;
+    margin:auto;
+    padding-top:2rem
+}
+
+.Voucher-img p{
+    color: #D6E1E7;
+    font: 1em sans-serif;
+    padding-top:1rem;
+}
+.Voucher-img img{
+    width:100%;
+}
+
+.Warning{
+    width: 85%;
+    margin: auto;
+    flex-direction: row;
+    display: flex;
+    align-content: space-between;
+    padding-top: 2rem;
+}
+
+.Warning img{
+    width: 10%;
+}
+
+.Warning p{
+    color:#D6E1E7;
+    font: 1em sans-serif;
+    text-align: left;
+    padding-left: 0.2rem;
+}

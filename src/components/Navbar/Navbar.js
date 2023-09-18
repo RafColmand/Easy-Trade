@@ -1,8 +1,16 @@
 import React, {useState} from "react";
+
+import { useNavigate }    from "react-router-dom"
 import "./Navbar.css"
 
 const Navbar = () => {
     const [ isOpen, setIsOpen] = useState(false)
+
+    const navigate = useNavigate();
+
+    const onClick = ()=>{
+        navigate('/login');
+    }
     return(
         <div className="navbar">
             <div className="nav_logo">
@@ -12,7 +20,7 @@ const Navbar = () => {
                 <a href="/"> Inicio </a>  
                 <a href="/philosophy"> Sobre Nosotros </a>   
                 <a href="/help"> Centro de Ayuda </a> 
-                <a href="/login" className="button-login" target="_blank" rel="noreferrer">Iniciar sesion</a>
+                <a onClick={onClick} className="button-login" target="_blank" rel="noreferrer">Iniciar sesion</a>
             </div>
             
             <div className={`nav_toggle ${isOpen && "open"}`} onClick={ () =>

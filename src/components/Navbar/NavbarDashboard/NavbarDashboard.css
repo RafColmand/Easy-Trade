@@ -23,6 +23,8 @@ body{
 
 .navegation.active{
     width: 300px;
+    
+    background-color: #566C7F;
 }
 
 .toggle{

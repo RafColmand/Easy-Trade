@@ -155,7 +155,7 @@ const EditProfile = () => {
                         <input
                             id="dateBirthday"
                             name="dateBirthday"
-                            type="text"
+                            type="date"
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.dateBirthday}

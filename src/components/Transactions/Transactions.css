@@ -1,0 +1,88 @@
+.balance {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height:8rem;
+}
+
+h2{
+    color: #fff;
+}
+
+span{
+    color: #D6E1E7;
+    font-size: x-large;
+}
+
+.balanceT{
+    width: 30%;
+    border-color:white; 
+    background-color: #3DA6FB;
+    margin-right: 0.5%;
+    margin-left: 4.5%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top:2rem;
+    
+}
+
+.balanceD{
+    width: 30%;
+    border-color: #1F2937; 
+    background-color: #3DA6FB;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-right: 4.5%;
+    padding-top:2rem;
+}
+
+.balanceC{
+    width: 30%;
+    border-color: #1F2937; 
+    background-color: #3DA6FB;
+    margin-right: 0.5%;
+    padding-top:2rem;
+}
+
+.detailTransactions{
+    width: 91%;
+    margin:auto;
+    border-color: white;
+    border-radius: 10px;
+}
+
+.table {
+    border-collapse: collapse; 
+    margin: 25px 0; 
+    font-size: 1rem; 
+    font-family: sans-serif; 
+    width:100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
+}
+
+.table thead tr { 
+    background-color: #3DA6FB; 
+    color: #ffffff; 
+    text-align: middle; 
+    width: 25%;
+}
+
+.table th, .table td { 
+    padding: 12px 15px; 
+    width: 25%;
+    color: #ffffff; 
+}
+
+.table tbody tr { 
+    border-bottom: 1px solid #dddddd; 
+} 
+
+.table th .deposit {
+    color:#3DA6FB;
+}
+
+.table th .retire {
+    color: red; 
+}

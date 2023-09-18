@@ -11,12 +11,12 @@ const SearchResult = ({results}) => {
                 return(
                     <li 
                     key={item.symbol} 
-                    className="li_Result"
+                    className="li_Resulta"
                     onClick={() => {
                         setStockSymbol(item.symbol);
                     }}>
-                        <span className="itemSym">{item.symbol}</span>
-                        <span className="itemDesc">{item.description}</span>
+                        <span className="itemSymb">{item.symbol}</span>
+                        <span className="itemDescr">{item.description}</span>
                     </li>
                 );
             }

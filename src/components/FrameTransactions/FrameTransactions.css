@@ -1,0 +1,12 @@
+.Transactions-form{
+    width: 50%;
+    margin: auto;
+    border: 1px solid #3DA6FB; 
+    max-height: fit-content;
+    padding-bottom: 5rem;
+}
+
+.titleTransactions{
+    background-color: #3DA6FB;
+    padding:1rem;
+}

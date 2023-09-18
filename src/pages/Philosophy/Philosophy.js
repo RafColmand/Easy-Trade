@@ -1,9 +1,16 @@
 import React from "react"
+import { useNavigate }    from "react-router-dom"
 import './Philosophy.css';
 
 import ContainerInit from "../../components/ContainerComponent/ContainerInit/ContainerInit";
 
 function Philosophy() {
+
+  const navigate = useNavigate();
+
+  const onClick= ()=>{
+    navigate('/Register');
+  }
 
   return (
    <ContainerInit>
@@ -18,7 +25,7 @@ function Philosophy() {
             <div className="title"><h2>Plataforma de Trading en Línea</h2></div>
             <div className="text"><h2>La plataforma Easy Trade es una plataforma de trading en línea 
               que permite a los usuarios operar en una variedad de instrumentos financieros.</h2></div>
-            <a href="/Register" className="button1" target="_blank" rel="noreferrer">Registrate Ahora</a>
+            <a onClick={onClick} className="button1" target="_blank" rel="noreferrer">Registrate Ahora</a>
 
           </div>
 

@@ -1,0 +1,100 @@
+.remove-inputs {
+    width: 90%;
+    margin: auto;
+}
+
+.input-box{
+    position: relative;
+    margin-bottom: 3rem;
+    flex-direction: column;
+    display: flex;
+}
+
+.input-box-sub{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+}
+
+.remove__input{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    border: 1px solid #7e7d7d;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0;
+    border-radius: 5px;
+    padding: 1rem .5rem;
+}
+
+.remove__input:focus{
+    border: 1px solid #3DA6FB;
+}
+
+.remove__input-error{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    border: 1px solid #7e7d7d;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0;
+    border-radius: 5px;
+    padding: 1rem .5rem;
+}
+
+.remove__input-error:focus{
+    border: 1px solid red;
+}
+
+.remove__label {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    font-size: 1rem;
+    color: #d8e1e7;
+    transition: 0.5s;
+    padding-top: 3.5rem;
+}
+
+.remove-inputs .remove__input:valid ~ .remove__label ,
+.remove-inputs .remove__input:focus ~ .remove__label{
+    transform: translateX(10px) translateY(-.85rem);
+    font-size: .75rem;
+    padding: .45rem;
+    padding-top: .15rem;
+    padding-bottom: .15rem;
+    background-color: #3DA6FB;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.remove-inputs .remove__input-error:valid ~ .remove__label ,
+.remove-inputs .remove__input-error:focus ~ .remove__label{
+    transform: translateX(10px) translateY(-.85rem);
+    font-size: .75rem;
+    padding: .45rem;
+    padding-top: .15rem;
+    padding-bottom: .15rem;
+    background-color: red;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.radios_remove{
+    flex-direction: row;
+    display: flex;
+    padding-bottom:1rem;
+}
+
+.remove__check{
+    font-size: 1rem;
+    color: #d8e1e7
+}
