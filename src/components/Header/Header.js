@@ -5,7 +5,7 @@ const Header = ({name}) => {
 
     return(
         <div className="HeaderContent">
-          <h2 className='title'>{name}</h2>
+          <h2 className='title_header'>{name}</h2>
           <Search/>  
         </div>
         

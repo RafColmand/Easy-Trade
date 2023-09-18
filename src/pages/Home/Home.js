@@ -51,18 +51,21 @@ const Home = () => {
         <div className='chart_dash'>
           <Chart/>
         </div>
-        <div className='overview_dash'>
-          <Overview 
-            symbol={stockSymbol} 
-            price= {quote.pc} 
-            change={quote.d}
-            changePercent={quote.dp}
-            currency={stockDetails.currency}
-          />
+        <div className='home_row'>
+          <div className='overview_dash'>
+            <Overview 
+              symbol={stockSymbol} 
+              price= {quote.pc} 
+              change={quote.d}
+              changePercent={quote.dp}
+              currency={stockDetails.currency}
+            />
+          </div>
+          <div className='details_dash'>
+            <DetailsDashboard details={stockDetails}/>
+          </div>
         </div>
-        <div className='details_dash'>
-          <DetailsDashboard details={stockDetails}/>
-        </div>
+        
       </div>
     </ContainerDashboard></div>
   )

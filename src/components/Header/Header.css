@@ -1,6 +1,14 @@
 .textHeader{
     font-size: 3rem;
     line-height: 1; 
+    text-align: left;
+}
+
+.title_header{
+    font-size: 4rem;
+    font-weight: bolder;
+    color: #FFF;
+    font-family: 'Work Sans', sans-serif;
 }
 
 @media (min-width: 1280px) { 
