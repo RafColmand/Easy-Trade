@@ -255,7 +255,7 @@ export const createTransaction = async (token, obj) => {
         body: JSON.stringify({
             card: obj.card,
             type: obj.type,
-            amount: obj.amount / 100
+            amount: obj.amount * 100
         })
     });
     if (!response.ok){
