@@ -1,10 +1,12 @@
-import React from "react"
+import React, {useState}from "react"
 import { useFormik } from "formik";
 import { useNavigate }    from "react-router-dom"
 
 import LoginFormFooter from "../../specific/LoginFormFooter/LoginFormFooter"
 import LoginFormHeader from "../../specific/LoginFormHeader/LoginFormHeader"
 import {users} from "../../../data/mock"
+
+import { login } from "../../../Utils/api/easyTrade";
 // Style
 import "./LoginForm.css"
 
@@ -12,25 +14,38 @@ import "./LoginForm.css"
 
 const LoginForm = () => {
 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const [token, setToken] = useState({});
+
+    const createToken = async () => {
+        try {
+
+            const result = await login(email, password);
+            setToken(result);
+          
+        } catch (error) {
+          setToken([]);
+          console.log(error);
+        }
+      };
+
     let navigate = useNavigate()
-    /* user filtra usuario por correo*/ 
-    let user = users.filter((data)=> data.email==="marihecmiranda160498@gmail.com");
-    
-    console.log(user);
 
     const formik = useFormik({
-        initialValues: { user: "", password: "" },
+        initialValues: { email: "", password: "" },
         validate: values => {
             const errors = {};
-            if (!values.password) {
+            if (!password) {
                 errors.password = 'Requerido';
-              } /*comparo contraseña*/else if(values.password!=="123abc"){
+              } /*comparo contraseña*/else if(email=="123abc"){
                 errors.password = 'Contraseña incorrecta';
               }
             
-            if (!values.email) {
+            if (!email) {
                 errors.email = 'Requerido';
-              } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+              } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
                 errors.email = 'Dirección de correo invalida';
               }
             return errors;
@@ -40,6 +55,8 @@ const LoginForm = () => {
             navigate('/home');
         },
     });
+            console.log(email)
+            console.log(password)
 
     return (
         <div className="login-container-form">
@@ -52,9 +69,9 @@ const LoginForm = () => {
                             name="email"
                             required
                             type="email"
-                            onChange={formik.handleChange}
+                            onChange={ev => setEmail(ev.target.value)}
                             onBlur={formik.handleBlur}
-                            value={formik.values.email}
+                            value={email}
                             className={formik.errors.email && formik.touched.email
                             ?"login__input-error"
                             :"login__input"}/>
@@ -71,9 +88,9 @@ const LoginForm = () => {
                             id="password"
                             name="password"
                             type="password"
-                            onChange={formik.handleChange}
+                            onChange={ev => setPassword(ev.target.value)}
                             onBlur={formik.handleBlur}
-                            value={formik.values.password}
+                            value={password}
                             required
                             className={formik.errors.password && formik.touched.password
                                 ?"login__input-error"
@@ -83,7 +100,7 @@ const LoginForm = () => {
                             {formik.errors.password && formik.touched.password && formik.errors.password}
                         </p>
                     </div>
-                        <button type="submit" className="button__login" disabled={formik.isSubmitting}>
+                        <button onClick={createToken} type="submit" className="button__login" disabled={formik.isSubmitting}>
                             Ingresar
                         </button>
                 </div>

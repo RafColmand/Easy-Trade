@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import { useFormik} from "formik";
 import { useNavigate }    from "react-router-dom"
 
@@ -10,6 +10,10 @@ import './ChangePassword.css'
 
 const ChangePassword= () => {
 
+    const [password, setPassword] = useState("");
+    const [newPassword, setNewPasswor] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+
     const navigate = useNavigate();
 
     const formik = useFormik({
@@ -17,21 +21,21 @@ const ChangePassword= () => {
         validate: values => {
             const errors = {};
             
-            if (!values.password) {
+            if (!password) {
                 errors.password = "Requerido"
             } 
 
-            if (!values.newPassword) {
+            if (!newPassword) {
               errors.newPassword = "Requerido"
-            } else if (values.newPassword.length < 8){
+            } else if (newPassword.length < 8){
                 errors.newPassword = "La contraseña debe tener al menos 8 caracteres"
-            } else if (values.newPassword===values.password){
+            } else if (newPassword===password){
                 errors.newPassword = "La contraseña debe ser diferente a la antigua contraseña"
             }
             
-            if (!values.confirmPassword) {
+            if (!confirmPassword) {
                 errors.confirmPassword = "Requerido"
-            } else if (values.confirmPassword!==values.newPassword){
+            } else if (confirmPassword!==newPassword){
                 errors.confirmPassword = "Las contraseñas no coinciden"
             }
 
@@ -55,9 +59,9 @@ const ChangePassword= () => {
                             id="password"
                             name="password"
                             type="password"
-                            onChange={formik.handleChange}
+                            onChange={ev => setPassword(ev.target.value)}
                             onBlur={formik.handleBlur}
-                            value={formik.values.password}
+                            value={password}
                             required
                             className={formik.errors.password && formik.touched.password
                                 ?"changePassword__input-error"
@@ -75,9 +79,9 @@ const ChangePassword= () => {
                             id="newPassword"
                             name="newPassword"
                             type="password"
-                            onChange={formik.handleChange}
+                            onChange={ev => setNewPasswor(ev.target.value)}
                             onBlur={formik.handleBlur}
-                            value={formik.values.newPassword}
+                            value={newPassword}
                             required
                             className={formik.errors.newPassword && formik.touched.newPassword
                                 ?"changePassword__input-error"
@@ -95,9 +99,9 @@ const ChangePassword= () => {
                             id="confirmPassword"
                             name="confirmPassword"
                             type="password"
-                            onChange={formik.handleChange}
+                            onChange={ev => setConfirmPassword(ev.target.value)}
                             onBlur={formik.handleBlur}
-                            value={formik.values.confirmPassword}
+                            value={confirmPassword}
                             required
                             className={formik.errors.confirmPassword && formik.touched.confirmPassword
                                 ?"changePassword__input-error"

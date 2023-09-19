@@ -48,7 +48,6 @@ const Wallet = () => {
             </div>
             
             <div className='wallet-assets'>
-              Lista de activos
             </div>
           </div>
         </div>

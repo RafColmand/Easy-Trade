@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import { useFormik} from "formik";
 import { useNavigate }    from "react-router-dom"
 
@@ -7,6 +7,12 @@ import { useNavigate }    from "react-router-dom"
 import './CardForm.css'
 
 const CardForm = () => {
+
+  const [number, setNumber] = useState("");
+  const [cvv, setCvv] = useState("");
+  const [nameCard, setNameCard] = useState("");
+  const [dateExp, setDateExp] = useState("");
+
   const navigate = useNavigate();
 
     const formik = useFormik({
@@ -14,19 +20,19 @@ const CardForm = () => {
         validate: values => {
             const errors = {};
             
-            if (!values.number) {
+            if (!number) {
                 errors.number = "Requerido"
             } 
 
-            if (!values.cvv) {
+            if (!cvv) {
               errors.cvv = "Requerido"
             } 
 
-            if (!values.nameCard) {
+            if (!nameCard) {
               errors.nameCard = "Requerido"
             } 
             
-            if (!values.dateExp) {
+            if (!dateExp) {
                 errors.dateExp = "Requerido"
             } 
 
@@ -36,7 +42,7 @@ const CardForm = () => {
             alert("Tarjeta registrada con exito");
             navigate('/home');
         },
-    });
+    }); 
 
   return (
     <div>
@@ -50,9 +56,9 @@ const CardForm = () => {
               id="number"
               name="number"
               type="password"
-              onChange={formik.handleChange}
+              onChange={ev => setNumber(ev.target.value)}
               onBlur={formik.handleBlur}
-              value={formik.values.number}
+              value={number}
               required
               className={formik.errors.number && formik.touched.number
                  ?"card__input-error"
@@ -70,9 +76,9 @@ const CardForm = () => {
               id="cvv"
               name="cvv"
               type="number"
-              onChange={formik.handleChange}
+              onChange={ev => setCvv(ev.target.value)}
               onBlur={formik.handleBlur}
-              value={formik.values.cvv}
+              value={cvv}
               required
               className={formik.errors.cvv && formik.touched.cvv
                  ?"card__input-error"
@@ -90,9 +96,9 @@ const CardForm = () => {
               id="nameCard"
               name="nameCard"
               type="text"
-              onChange={formik.handleChange}
+              onChange={ev => setNameCard(ev.target.value)}
               onBlur={formik.handleBlur}
-              value={formik.values.nameCard}
+              value={nameCard}
               required
               className={formik.errors.nameCard && formik.touched.nameCard
                  ?"card__input-error"
@@ -110,9 +116,9 @@ const CardForm = () => {
               id="dateExp"
               name="dateExp"
               type="date"
-              onChange={formik.handleChange}
+              onChange={ev => setDateExp(ev.target.value)}
               onBlur={formik.handleBlur}
-              value={formik.values.dateExp}
+              value={dateExp}
               required
               className={formik.errors.dateExp && formik.touched.dateExp
                  ?"card__input-error"
