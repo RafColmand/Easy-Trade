@@ -20,7 +20,7 @@ export const login = async (email, password) => {
 }
 
 export const createUser = async (obj) => {
-    const url = `${basePath}/user`;
+    const url = `${basePath}/user/create`;
     const response = await fetch(url, {
         method: "POST",
         headers: {
