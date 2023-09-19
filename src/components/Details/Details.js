@@ -35,7 +35,7 @@ function Details() {
             {data.map(inf => (
                <div className="Container_wrap">
                   <div className="title"><h2>{inf.title}</h2></div>
-                  <div className="text"><h2>{inf.dec}</h2></div>
+                  <div className="text"><h2>{inf.desc}</h2></div>
                {inf.inf_help.map((info, index)=>
                <>
                   <div className="Wrap" onClick={() => toggle(index)} key={index}>
